@@ -1,7 +1,46 @@
 import BookList from "../components/bookList";
 import { Header } from "../components/header";
 
-const dummyAllBooksData = [
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ position: "relative", width: "80%" }}>
+          <img
+            src="https://wp.penguin.co.uk/wp-content/uploads/2017/07/puffin-and-bear-bookclub-inline-2.jpg"
+            alt="book"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              textAlign: "center",
+              color: "white",
+            }}
+          >
+            <h1>Second-hand Book Marketplace</h1>
+            <h3>Earn money and save the environment</h3>
+          </div>
+        </div>
+
+        <BookList bookList={dummyAllBooksData} />
+      </div>
+    </>
+  );/*  */
+};
+
+
+export const dummyAllBooksData = [
   {
     id:0,
     price:'20',
@@ -114,42 +153,4 @@ const dummyAllBooksData = [
   },
 ];
 
-const Home = () => {
-  return (
-    <>
-      <Header />
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <div style={{ position: "relative", width: "80%" }}>
-          <img
-            src="https://wp.penguin.co.uk/wp-content/uploads/2017/07/puffin-and-bear-bookclub-inline-2.jpg"
-            alt="book"
-            style={{ width: "100%", height: "auto", display: "block" }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              textAlign: "center",
-              color: "white",
-            }}
-          >
-            <h1>Second-hand Book Marketplace</h1>
-            <h3>Earn money and save the environment</h3>
-          </div>
-        </div>
-
-        <BookList bookList={dummyAllBooksData} />
-      </div>
-    </>
-  );/*  */
-};
-
-export { Home, dummyAllBooksData };
+export default Home;
