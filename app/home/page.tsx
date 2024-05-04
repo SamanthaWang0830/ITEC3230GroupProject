@@ -1,7 +1,7 @@
 import BookList from "../components/bookList";
 import { Header } from "../components/header";
 
-export const dummyAllBooksData = [
+const dummyAllBooksData = [
   {
     id:0,
     price:'20',
@@ -114,7 +114,7 @@ export const dummyAllBooksData = [
   },
 ];
 
-export const Home = () => {
+const Home = () => {
   return (
     <>
       <Header />
@@ -149,7 +149,7 @@ export const Home = () => {
         <BookList bookList={dummyAllBooksData} />
       </div>
     </>
-  );
+  );/*  */
 };
 
-export default Home;
+export { Home, dummyAllBooksData };
