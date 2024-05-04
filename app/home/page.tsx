@@ -39,8 +39,7 @@ const Home = () => {
   );/*  */
 };
 
-
-export const dummyAllBooksData = [
+const dummyAllBooksData = [
   {
     id:0,
     price:'20',
@@ -152,5 +151,7 @@ export const dummyAllBooksData = [
     condition:'Brand New'
   },
 ];
+
+
 
 export default Home;
