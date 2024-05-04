@@ -9,7 +9,7 @@ export interface BookListProps {
   bookList: BookProps[];
 }
 
-export const bookList: React.FC<BookListProps> = ({ bookList }) => {
+export const BookList: React.FC<BookListProps> = ({ bookList }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleSearchChange = (event: any) => {
@@ -59,4 +59,4 @@ export const bookList: React.FC<BookListProps> = ({ bookList }) => {
   );
 };
 
-export default bookList;
+export default BookList;
