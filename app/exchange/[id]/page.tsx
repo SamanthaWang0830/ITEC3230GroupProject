@@ -182,7 +182,7 @@ const Exchange = ({ params }: { params: { id: number } }) => {
                       Waiting for another people to approve...
                     </h3>
                     <p>
-                      (You'd better to take a video when you unpack your parcel,{" "}
+                      (You would better to take a video when you unpack your parcel,{" "}
                       <br /> in case you want to return it and video can be used
                       as an evident)
                     </p>
