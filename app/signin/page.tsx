@@ -11,22 +11,21 @@ import {
   Link
 } from "@mui/material";
 
-export default function Home() {
+export default function SignIn() {
   const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (event: any) => {
     event.preventDefault();
-    router.push('/home')
+    router.push("/home");
   };
 
   return (
-    <Container maxWidth="sm" style={{margin:'100px auto'}}>
+    <Container maxWidth="sm" style={{ margin: "100px auto" }}>
       <Typography variant="h5" gutterBottom>
-        Register
+        Sign In
       </Typography>
       <form onSubmit={handleSubmit} style={{marginBottom:'20px'}}>
         <Grid container spacing={2}>
@@ -51,23 +50,14 @@ export default function Home() {
             />
           </Grid>
           <Grid item xs={12}>
-            <TextField
-              label="Confirm Password"
-              type="password"
-              fullWidth
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-              required
-            />
-          </Grid>
-          <Grid item xs={12}>
             <Button type="submit" variant="contained" color="primary">
-              Register
+              Sign In
             </Button>
           </Grid>
         </Grid>
       </form>
-      <Link href="/signin">Do not have an account yet? Register</Link>
+
+      <Link href="/">Do not have an account yet? Register</Link>
     </Container>
   );
 }
